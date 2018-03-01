@@ -12,3 +12,9 @@ def build(x, y):
 print(build(4,5)(4,5)); #41
 
 #需要注意lambda是否传入参数
+
+#5!
+from functools import reduce;
+n = 5;
+factorial = reduce(lambda x,y:x*y,range(1,n+1)); #120
+print(factorial);
