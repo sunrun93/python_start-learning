@@ -37,3 +37,11 @@ t.name = 'David';
 t.age = 27;
 #t.score = 99; #'Teacher' object has no attribute 'score'
 print(t.name,t.age); #David 27
+
+#__slots__定义的属性仅对当前类实例起作用，对继承的子类是不起作用的
+class FemaleTeacher(Teacher):
+    pass;
+
+f = FemaleTeacher();
+f.gender = 'female';
+print(f.gender); #female 
